@@ -1,0 +1,73 @@
+<h1>Capital Stair Cleaning#home</h1>
+<p>Find me in app/views/static_pages/home.html.erb</p>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="../payments/quarter_billing">Quarterly Billing</a></li>
+        <li><a href="../transactions/index">Import Bank Transactions</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid text-center">    
+  <div class="row content">
+    <div class="col-sm-2 sidenav">
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      <p><a href="#">Link</a></p>
+      
+    <div class="ui-widget">
+  		<label for="tags-v1">Tags-v1: </label>
+  		<input id="tags-v1" >
+		</div>
+		
+   </div>
+    <div class="col-sm-8 text-left"> 
+      <h2 id='prop_address'></h2>
+      <h3 id='prop_id'></h3>
+      <h3 id='cust_details'></h3>
+
+    
+      <h3>Customer Accounts:</h3>
+
+
+      <table class= 'table '> 
+        <tr  id='cust_accounts' ></tr>
+      </table>
+<!--                     -->
+    </div>
+
+    <div class="col-sm-2 sidenav">
+      <div class="container-fluid">
+        <button id='new-customer-acct'>new customer account</button>
+      </div>
+      <div class="well">
+        <p>ADS</p>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
+<!-- modal -->
+<%= render 'static_pages/modal_new_cust_acct' %>
+
+<!-- modal -->
+<%= render 'static_pages/modal_acct' %>

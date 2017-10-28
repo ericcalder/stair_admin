@@ -1,0 +1,23 @@
+<h1>Customers#index</h1>
+<p>Find me in app/views/customers/index.html.erb</p>
+<table>
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>email</th>
+			<th>property_id</th>
+		</tr>
+	</thead>
+	
+</table>
+<div>
+	<h3>Import CSV</h3>
+	<%= form_tag(import_customers_path, multipart: true) do %>
+	<%= file_field_tag :file %>
+	<%= submit_tag "Import csv" %>
+	<% end %>
+</div>
+<div>
+	<h3>Export CSV</h3>
+	<a href="/properties.csv">Export csv</a>
+</div>

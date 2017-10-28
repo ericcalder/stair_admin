@@ -1,0 +1,13 @@
+<div class='row'>
+	<h3>Edit Account#_form</h3>
+	<div class="col-md-4 col-md-offset-1">
+		<%= form_for @account do |a| %>
+  		<%= a.label :StartingDate %>:
+  		<%= a.date_field :start_date %>
+  		<%= a.label :StartingBalance%>:
+  		<%= a.number_field :bal, :step => "0.01" %>
+  		<%= a.hidden_field :customer_id, :value =>  @account.customer_id %><br />
+  		<%= a.submit %>
+		<% end %>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<h1>Transaction#index</h1>
+<p>Find me in app/views/transaction/index.html.erb</p>
+
+
+<div>
+	<h3>Import bank transactions CSV</h3>
+	<%= form_tag({controller:'transactions', action: 'import'}, multipart: true) do %>
+	<%= file_field_tag :file %>
+	<%= submit_tag "Import cb bank transactions csv" %>
+	<% end %>
+</div>
+
+
+<div>
+	<h3>Export CSV</h3>
+	<a href="/transactions.csv">Export bank csv</a>
+</div>
+
+
+
+

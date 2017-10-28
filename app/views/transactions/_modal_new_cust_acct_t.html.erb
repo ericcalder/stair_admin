@@ -1,0 +1,42 @@
+<!-- modal -->
+<div class="modal fade" id="modal_new_customer_acct_form_t">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+        </button>
+        <h4 class="modal-title">New Customer Account</h4>
+      </div>
+      <div class="modal-body">
+         <h4 id='propadd'></h4>
+
+      </div>
+
+      <form class='modal-body' id='new_cust_acct_t'>
+        <label for='new_name'>Name:</label>
+        <input type="text" name="name" id="new_name_t">
+        <label for='new_email'>email:</label>
+        <input type="text" name="email" id="new_email_t"><br>
+        <label for='new_start_date'>Start Date:</label>
+        <input type="text" name="start_date" id="new_start_date_t"><br>
+        <label for='new_bal'>Balance:</label>
+        <input type="number" step=0.01 id="new_bal_t">
+        <label for='new_bal_date'>Balance Date:</label>
+        <input type="text" id="new_bal_date_t">
+        <label for='propID'>property_id:</label>
+        <input type="number"  id="propID_t" readonly>
+  
+  
+          <input type="submit"  value="Submit" id="t_form">
+     </form>
+      
+          <p id='error-message'></p>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" id="btnSave" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+</div>

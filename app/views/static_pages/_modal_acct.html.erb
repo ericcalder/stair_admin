@@ -1,0 +1,86 @@
+<div class="modal fade" id="modal_acct-window">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span>
+          </button>
+        <div id='tabs'>
+          <ul class="nav nav-tabs" id="tabContent">
+            <li class="active"><a href="#tabs-1" data-toggle="tab">Account Details</a></li>
+            <li><a href="#tabs-2"  data-toggle="tab">Invoice</a></li>
+            <li><a href="#tabs-3" data-toggle="tab">Property Manager</a></li>
+          </ul>
+  <!--    content for tab-1     -->          
+            <div id="tabs-1">
+            <p>Content for Tab 1</p>
+             <div class="modal-body" id='details'>
+              <h4 id='tabs-1Address'></h4>
+              <h4>Customer id:<span id='account_id'></span></h4>
+         
+                 <form class='edit_form' id="edit_form">
+                    <h4>Account Name:</h4><input id='a_name' type="text" value= "">
+                    <span>Account email:</span><input id='a_email' type="text" value="email"><br>
+                    <h4>Balance Due:</h4><input id='a_bal' type="number" step='0.01' value="">
+                    <span>Balance Date:</span><input id='a_bal_date' type="text" id='datepicker' value="balance date">
+                    <h4>Start Date:</h4><input id='a_start_date' type="text" id='datepicker'>
+                    <span>Close Date:</span><input id='a_close_date' type="text" id='datepicker' >
+                    <input type='hidden' id='accountIDInput' >
+                    <h4>Quarterly Cost:</h4><input id='quarterCost' type="number" step='0.01' value="">
+                    <br><br>
+                    <input type= 'submit' value='edit and save changes'>
+                </form>
+
+                <h3>Payments Made:</h3>
+
+                <table class='acctTable'>
+                  <tr id='acctTrans'></tr>
+                </table>
+                <h2 id='balance'></h2>
+                <h2 id='acctClosed'></h2>
+              </div>
+              <div class="modal-footer">
+        <button type="button" id='btnAddPayment' class="btn btn-primary">Add Payment</button>
+        <button type="button" id='btnAddBilling' class="btn">Add Billing</button>
+        <button type="button" id='btnRedirect' class="btn">Page redirect</button>
+        <button type="button" id="btnDeleteAcct" class="btn">Close Account</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <!--
+        <button type="button" id="btnSave" class="btn btn-primary">Save changes</button>
+      -->
+      </div>
+            </div>
+   <!--    content for tab-2 -->      
+            <div id="tabs-2">
+                <p>Content for Tab 2</p>
+                <div class="modal-body">
+                <h3><span id='tabs-2-flat'></span><span id='address'></span></h3>
+                <h4>Quarterly Cost = £<span id='tabs-2-quarterly_cost'></span></h4>
+                <h4>Quarter Cost = £<span id='tabs-2-quarter_cost'></span></h4>
+                 <table class='acctTable'>
+                  <tr id='acctTrans'></tr>
+                </table>
+                <h2 id='balance'></h2>
+                <h2 id='acctClosed'></h2> 
+                </div>
+                <div class="modal-footer">
+                 <button type="button" id='btnShowPdf' class="btn btn-primary">Show pdf</button>
+               </div>
+            </div>
+
+   <!--    content for tab-2 -->      
+            <div id="tabs-3">
+                <p>Content for Tab 3</p>
+            </div>
+        </div>
+            <div id='tabid'></div>
+
+         
+
+      
+      
+
+      
+    </div>
+    <!-- /.modal-content -->
+  </div>
+</div>

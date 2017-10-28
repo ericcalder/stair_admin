@@ -1,0 +1,49 @@
+<h2>Accounts#show</h2>
+<h4>find me at /views/accounts/show.html.erb</h4>
+<h3>
+<%= @customer.name %></br>
+<%= @property.flat %>
+<%= @property.address %></br>
+Account_id:<%= @account.customer_id %>
+</h3>
+Date: <%= Date.today %>
+<h2>
+	
+
+Opening Balance Due: <%= "£#{@account.bal}    as of #{@account.start_date}" %>
+
+</h2>
+<div class="table-responsive">
+	<table class='table table-striped'>
+		<th>Date</th>
+		<th>Transaction</th>
+		<th>Credit</th>
+		<th>Debit</th>
+		
+		<% @account.payments.where('tdate > ?','2015-01-01').order(:tdate).each do |p| %>
+		<tr>
+			<td><%= p.tdate %></td>
+			<td><%= p.trans %></td>
+			<td><%= "£#{p.amt}" if p.type_of_trans == 0 %></td>
+			<td><%= "£#{p.amt}" if p.type_of_trans == 1 %></td>
+		</tr>
+		<% end %>
+		
+
+	</table>
+	<h4>payments<%= @account.payments.where('tdate > ? and type_of_trans= ?','2015-01-01', 0).sum(:amt) %></h4>
+	<h4>billings<%= @account.payments.where('tdate > ? and type_of_trans= ?','2015-01-01', 1).sum(:amt) %></h4>
+	<h4>Balance Due: <%= "#{@account.bal_due}" %></h4></br>
+
+	</div>
+	<%= link_to 'Back static_pages/home', {:controller => 'static_pages', :action => 'home'} %></br>
+
+	<%= link_to 'Back to Accounts Index', accounts_index_path %></br>
+
+	<%= link_to 'Make a payment/billing', {:controller => 'payments', :action => 'new', :id => @account.customer_id} %></br>
+
+	<%= link_to 'Edit Account', {:controller => 'accounts', :action => 'edit', :id => @account.customer_id} %>
+		<div>
+			<h4>Generate report.pdf</h4>
+			<%= link_to "Generate report.pdf", accounts_export_path(format: "pdf") %>
+		</div>

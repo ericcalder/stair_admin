@@ -1,0 +1,34 @@
+<h2>transactions#show </h2>
+property_id:<%= params[:address][:id] %>
+<%= @var %>
+<div>
+	<table>
+		<thead>
+			<tr>
+				<th>Flat..</th>
+				<th>Address....</th>
+				<th>PostCode...</th>
+				<th>id..</th>
+				<th>CustomerName..</th>
+				<th>Customer email..</th>
+				<th>Customer Property_id..</th>
+				<th>Customer Account Balance..</th>
+				<th>Customer Account id..</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><%= @property.flat %></td>
+				<td><%= @property.address %></td>
+				<td><%= @property.postcode %></td>
+				<td><%= @property.id %></td>
+				<td><%= @property.customer.name %></td>
+				<td><%= @property.customer.email %></td>
+				<td><%= @property.customer.property_id %></td>
+				<td><%= @property.customer.account.bal %></td>
+				<td><%= @property.customer.account.id %></td>
+			</tr>
+		</tbody>
+		
+	</table>
+</div>

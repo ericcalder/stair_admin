@@ -1,0 +1,15 @@
+<h2>Customers#show</h2>
+<h4>find me at /views/customers/show.html.erb</h4>
+
+<%= @customer.name %>
+<%= @property.flat %>
+<%= @property.address %>
+	<table>
+		<% @customer.payments.each do |p| %>
+		<tr>
+			<td><%= p.tdate %></td>
+			<td><%= p.amt %></td>
+			<td><%= p.trans %></td>
+		</tr>
+		<% end %>
+	</table>

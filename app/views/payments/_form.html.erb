@@ -1,0 +1,16 @@
+<div class='row'>
+	<h3>Payments/Billings#_form</h3>
+	<div class="col-md-4 col-md-offset-1">
+		<%= form_for @payment do |f| %>
+  		<%= f.label :Date %>:
+  		<%= f.date_field :tdate %>
+  		<%= f.label :Transaction %>:
+  		<%= f.text_field :trans %>
+  		<%= f.label :Amount %>:
+  		<%= f.number_field :amt, :step => "0.01" %>
+  		<%= f.hidden_field :account_id, :value =>  @account.id %>
+      <%= f.hidden_field :type_of_trans, :value => 0 %><br />
+  		<%= f.submit %>
+		<% end %>
+	</div>
+</div>

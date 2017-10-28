@@ -1,0 +1,10 @@
+<h2>Quarter_billing_save</h2>
+
+ <% @customer.each_with_index do |c,i| %>
+        		<%= c.name %>
+        	    <%= @bill[i].tdate %><br>
+		        <%= @bill[i].amt.to_s %>
+		        <%= @bill[i].account_id.to_s %>
+		        <%= @bill[i].trans %><br>
+		    
+        <% end %>

@@ -1,0 +1,32 @@
+<h2>import</h2>
+length transfile= <%= @len %>
+length tfile = <%= @len1 %>
+
+<div class='container'>
+
+<table id='import'>
+	<thead class="thead-inverse">
+		<tr>			
+			<th>Date</th>
+			<th>Amount</th>
+			<th>Transaction</th>
+		</tr>
+	</thead>
+	<tbody class='import-data'>
+		<% (0..(@len1-1)).each do |t| %>		
+		<tr>
+			<td><%= @tfile[t][0] %></td>
+			<td><%= @tfile[t][1] %></td>
+			<td><%= @tfile[t][2] %></td>
+					
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+
+<%= link_to 'Return to static_pages/home', '/static_pages/home' %> 
+
+<!-- modal -->
+<%= render 'transactions/modal1' %>
+<%= render 'transactions/modal_new' %>
+</div>

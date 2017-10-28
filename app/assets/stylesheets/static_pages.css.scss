@@ -1,0 +1,36 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+#pymts, #cust_accounts ,tr, td {
+ //   border: 1px solid black;
+    padding: 5px;
+    text-align: left;
+    tr:hover {background-color: #f5f5f5}
+    margin-right: 10px;
+    margin-left: 10px;
+    th {
+    background-color: #4CAF50;
+    color: white;
+}
+}
+.edit_form {
+	color: blue;
+	font-weight: 900;
+	background-color: azure;
+	// "bold",
+    //"font-size": "large";
+    font-family :"verdana";
+
+    input {
+    background-color: #e5eaea;
+    color: black;
+}
+    }
+
+h4 {
+	color: black;
+	//font-weight: 900;
+	//font-family :"verdana";
+    }

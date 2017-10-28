@@ -1,0 +1,28 @@
+<h1>Accounts#index</h1>
+<p>Find me in app/views/accounts/index.html.erb</p>
+<table>
+	<thead>
+		<tr>
+			
+			<th>Balance</th>
+			
+			<th>customer_id</th>
+		</tr>
+	</thead>
+	<tbody>
+		<% @accounts.each do |a| %>
+		<tr>
+			<td><%= a.bal %></td>
+			<td><%= a.customer_id %></td>
+			<td><%= link_to 'Show', account_path(a) %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<div>
+	<h3>Import CSV</h3>
+	<%= form_tag(import_accounts_path, multipart: true) do %>
+	<%= file_field_tag :file %>
+	<%= submit_tag "Import csv" %>
+	<% end %>
+</div>
